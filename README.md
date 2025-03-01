@@ -1,52 +1,99 @@
-# Placement-Management-System
- 
-<html>
-<body>
+# Placement Management System
 
-<p>Our system aims at providing the compatibility to simplify the process of placement for College Students, various Companies visiting the campus for recruitment and even the College TPO.</p>
+Our system aims to simplify the placement process for College Students, Companies visiting the campus for recruitment, and the College TPO (Training and Placement Officer).
 
-There are three type of user in system : TPO, STUDENT, COMPANT(HR)
-<hr>
- <h3>1.	TPO</h3><br>
-<ul>
-<li>View details: Allows TPO to view his and college details. </li>
-<li>Update details: Allows TPO to Update all details.</li>
-<li>Change password: This service enables TPO to change password.</li>
-<li>Add student: Allows TPO to add a student to database with excel file.</li> 
-<li>View Student details: Allows TPO view and search for student information.</li>
-<li>View Company details: Allows TPO view and search for company information.</li>
-<li>Request Section: Allows TPO view company job request and assign jobs to students.</li>
-<li>Oncampus Job Announce: Allows TPO to see All Oncampus job and Remove assign Job and also see applied students list. </li>
- </ul>
-<hr>
-<h3>2.	Student:</h3><br>
-<ul>
-<li>View details: Allows Student to view his details.</li>
-<li>Update details: Allows Student to Update all details.</li>
-<li>Change password: This service enables Student to change password.</li>
-<li>View Company details: Allows Student view and search for company information.</li>
-<li>View Offcampus Job: Allows Student to see all job details which announce by company direct and also apply for this job.</li>
-<li>View applied Offcampusjob list.</li>
-<li>View TPO details: Allows Student view their TPO information if student is verified.</li>
-<li>View Oncampus Job: Allows Student to see all oncampus job/intern details announce by company and assign by tpo direct and also apply for this job.</li>
-<li>View applied Oncampusjob list.</li>
- </ul>
- <hr>
-  <h3>3.	Company (HR):</h3><br>
-<ul>
-<li>View details: Allows Company (HR) to view his details.</li> 
-<li>Update details: Allows Company HR to Update all details.</li>
-<li>Change password: This service enables Company Hr to change password.</li>
-<li>View Student details: Allows HR view and search for all students information.</li>
-<li>Job Announce: Allows Company HR to announce offcampus job to whole system students.</li>
-<li>List of Offcampus Job: Allows Company HR to see update and delete job announce. And also see student list who applied.</li>
-<li>View TPO details: Allows HR view and search for all tpo and college information.</li>
-<li>Request Tpo: Allows Company HR to request tpo for Job Announce.</li>
-<li>View Request: Allows Company HR to see update and delete job Request.</li>
-<li>View Accepted request: Allows Company HR to see all tpo accepted job Request.  And also see student list who applied.</li>
-</ul>
-</body>
-</html>
+## User Roles:
 
+There are three types of users in the system:
 
+- TPO (Training and Placement Officer)
+- Student
+- Company (HR)
 
+## Features
+
+### TPO Features:
+
+- View Details: Allows TPO to view personal and college details.
+- Update Details: Enables TPO to update all details.
+- Change Password: Allows TPO to change their password.
+- Add Student: Allows TPO to add students to the database via an Excel file.
+- View Student Details: Enables TPO to search and view student information.
+- View Company Details: Enables TPO to search and view company details.
+- Request Section: Enables TPO to view job requests from companies and assign jobs to students.
+- On-campus Job Announcements: Allows TPO to manage on-campus job postings and view applied students.
+
+### Student Features:
+
+- View Details: Enables students to view personal details.
+- Update Details: Allows students to update their details.
+- Change Password: Enables students to change their password.
+- View Company Details: Enables students to search and view company details.
+- View Off-campus Jobs: Allows students to browse and apply for jobs posted by companies.
+- View Applied Off-campus Jobs: Shows a list of jobs the student has applied for.
+- View TPO Details: Allows students to see their assigned TPO's details (if verified).
+- View On-campus Jobs: Enables students to view and apply for on-campus jobs assigned by the TPO.
+- View Applied On-campus Jobs: Lists on-campus jobs the student has applied for.
+
+### Company (HR) Features:
+
+- View Details: Enables HR to view personal details.
+- Update Details: Allows HR to update their details.
+- Change Password: Enables HR to change their password.
+- View Student Details: Allows HR to search and view student details.
+- Job Announcements: Enables HR to announce off-campus jobs for students.
+- List of Off-campus Jobs: Allows HR to manage job postings and view applicants.
+- View TPO Details: Enables HR to search and view details of TPOs and colleges.
+- Request TPO: Allows HR to request TPOs to announce jobs.
+- View Requests: Enables HR to update and delete job requests.
+- View Accepted Requests: Allows HR to see accepted job requests and view applicants.
+
+## Installation Guide
+
+### Prerequisites
+
+Ensure you have the following installed on your system:
+
+- Node.js
+- MySQL
+- XAMPP (For managing MySQL and phpMyAdmin)
+
+### Clone the Repository
+
+```
+git clone https://github.com/Sahil-4555/Placement_Managment_System.git
+```
+
+### Install Dependencies
+
+```
+npm i
+```
+
+### Configure the Database
+
+1. start `XAMPP (or MySQL service)` and open `phpMyAdmin (http://localhost/phpmyadmin/)`.
+2. Create a new database:
+
+```
+CREATE DATABASE placement;
+```
+
+3. Import the provided SQL file into `phpMyAdmin`.
+
+- Go to Import
+- Select the `database/placement.sql` file from the project folder
+- Click Go
+
+4. Set Up Variables in `database.js`. Modify values as needed.
+5. Start the Server
+
+```
+npm start
+```
+
+6. If everything is set up correctly, the application will run on:
+
+```
+http://localhost:8000
+```
